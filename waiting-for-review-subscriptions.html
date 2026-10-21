@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>App Stuck in &quot;Waiting for Review&quot; With Subscriptions? What to Check and What Not to Do</title>
+<meta name="description" content="New app with subscriptions stuck in Waiting for Review for days or weeks? What to check in App Store Connect, how to request an expedited review, and what not to do.">
+<link rel="canonical" href="https://app-review-fixes.netlify.app/waiting-for-review-subscriptions">
+<meta property="og:title" content="App Stuck in &quot;Waiting for Review&quot; With Subscriptions? What to Check and What Not to Do"><meta property="og:description" content="New app with subscriptions stuck in Waiting for Review for days or weeks? What to check in App Store Connect, how to request an expedited review, and what not to do.">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5f5f66;--line:#e4e1da;--accent:#0b63ce;--box:#f1efe9;--warn:#fff4d6}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececef;--muted:#a3a3ad;--line:#2c2c31;--accent:#6aa8ff;--box:#1e1e22;--warn:#2d2715}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main,header,footer{max-width:720px;margin:0 auto;padding:0 16px}
+header{padding-top:20px;font-weight:600}header a{color:var(--fg);text-decoration:none}
+h1{font-size:1.9rem;line-height:1.2;margin:28px 0 8px}h2{font-size:1.25rem;margin:32px 0 8px}
+p.lede{color:var(--muted);margin-top:0}a{color:var(--accent)}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--warn);border-left:4px solid #d9a400;border-radius:6px}
+ol li,ul li{margin:6px 0}code{background:var(--box);padding:1px 5px;border-radius:4px;font-size:.92em}
+.cta{margin:36px 0;padding:18px 20px;background:var(--box);border:1px solid var(--line);border-radius:10px}
+.cta strong{display:block;margin-bottom:4px}.btn{display:inline-block;margin-top:8px;padding:9px 16px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+.cards a{display:block;padding:14px 16px;margin:10px 0;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--fg)}
+.cards a span{display:block;color:var(--muted);font-size:.92rem}
+footer{margin-top:48px;padding-bottom:32px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:16px}
+</style></head>
+<body><header><a href="/">App Review Fixes</a></header>
+<main><h1>Stuck in "Waiting for Review" with a subscription app</h1>
+<p class="lede">Lots of new subscription apps sit in "Waiting for Review" for a long time. Usually you can only wait, but some setup problems are worth ruling out first.</p>
+<p>The Apple Developer Forums have many threads from developers with new apps stuck for one to several weeks, often after a first rejection and resubmission. Apple doesn't publish review times for each app, so nobody outside Apple can tell you exactly when yours will move.</p>
+<h2>Check these first</h2>
+<ol>
+<li><strong>Agreements:</strong> under Business in App Store Connect, the Paid Apps Agreement, tax and banking should all be active. Reviewers can't test subscriptions without them.</li>
+<li><strong>Subscriptions attached:</strong> on the version page, the subscriptions should be listed under "In-App Purchases and Subscriptions" and show as submitted with the version. A first subscription has to be reviewed together with an app version. See <a href="/guideline-2-1-b-in-app-purchase-rejection">the 2.1(b) guide</a>.</li>
+<li><strong>Review notes and demo account:</strong> if your app has login, App Review Information needs a demo account that works and doesn't expire.</li>
+<li><strong>Unanswered messages:</strong> check the App Review section and your email for a question from Apple that's waiting on you. An unanswered information request can hold things up.</li>
+</ol>
+<h2>Request an expedited review (if you have a real reason)</h2>
+<p>Apple has a Contact App Review form where you can request an expedited review, for example for a critical bug fix or a time-sensitive launch. Give a short, specific reason. Developers on the forums report mixed results, and some say an accepted expedite still took days.</p>
+<h2>What not to do</h2>
+<ul>
+<li>Don't keep removing the build and resubmitting just to "bump" it. Developers report it doesn't help and can make things worse.</li>
+<li>Don't open several duplicate support requests. Send one clear message and follow up after a few days.</li>
+</ul>
+<p>When it does move, a common next step for subscription apps is a 2.1(b) or iPad issue. It's worth testing for those while you wait: <a href="/ipad-rejection-guideline-2-1-a">iPad testing checklist</a>.</p>
+<div class="cta"><strong>Shipping a subscription app with Expo, EAS or RevenueCat?</strong>
+I turned the fixes from my own 10 rejections into a pre-submit checklist plus 17 copy-paste AI prompts, so you can check everything before you submit.
+<br><a class="btn" href="https://morningreset4.gumroad.com/l/ship-your-app">Get the guide</a></div>
+</main>
+<footer>Written by Ryan, an indie iOS developer in Toronto, from his own App Review rejections. Not affiliated with Apple. Always check Apple's current <a href="https://developer.apple.com/app-store/review/guidelines/">App Review Guidelines</a>. Updated 2026-10-21.</footer>
+</body></html>

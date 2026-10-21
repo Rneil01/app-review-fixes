@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iPad Screenshot Sizes for App Store Connect (and Avoiding 2.3 Rejections)</title>
+<meta name="description" content="Which iPad screenshot sizes App Store Connect requires (13-inch: 2064 x 2752 or 2048 x 2732), when iPad screenshots are required, and how to avoid guideline 2.3 metadata rejections.">
+<link rel="canonical" href="https://app-review-fixes.netlify.app/ipad-screenshots-2-3">
+<meta property="og:title" content="iPad Screenshot Sizes for App Store Connect (and Avoiding 2.3 Rejections)"><meta property="og:description" content="Which iPad screenshot sizes App Store Connect requires (13-inch: 2064 x 2752 or 2048 x 2732), when iPad screenshots are required, and how to avoid guideline 2.3 metadata rejections.">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5f5f66;--line:#e4e1da;--accent:#0b63ce;--box:#f1efe9;--warn:#fff4d6}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececef;--muted:#a3a3ad;--line:#2c2c31;--accent:#6aa8ff;--box:#1e1e22;--warn:#2d2715}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main,header,footer{max-width:720px;margin:0 auto;padding:0 16px}
+header{padding-top:20px;font-weight:600}header a{color:var(--fg);text-decoration:none}
+h1{font-size:1.9rem;line-height:1.2;margin:28px 0 8px}h2{font-size:1.25rem;margin:32px 0 8px}
+p.lede{color:var(--muted);margin-top:0}a{color:var(--accent)}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--warn);border-left:4px solid #d9a400;border-radius:6px}
+ol li,ul li{margin:6px 0}code{background:var(--box);padding:1px 5px;border-radius:4px;font-size:.92em}
+.cta{margin:36px 0;padding:18px 20px;background:var(--box);border:1px solid var(--line);border-radius:10px}
+.cta strong{display:block;margin-bottom:4px}.btn{display:inline-block;margin-top:8px;padding:9px 16px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+.cards a{display:block;padding:14px 16px;margin:10px 0;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--fg)}
+.cards a span{display:block;color:var(--muted);font-size:.92rem}
+footer{margin-top:48px;padding-bottom:32px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:16px}
+</style></head>
+<body><header><a href="/">App Review Fixes</a></header>
+<main><h1>iPad screenshots: required sizes and avoiding 2.3 rejections</h1>
+<p class="lede">If your app runs on iPad, App Store Connect needs at least one 13-inch iPad screenshot. And they have to actually show iPad.</p>
+<h2>Sizes Apple accepts (from Apple's screenshot specifications)</h2>
+<ul>
+<li><strong>iPad 13-inch, required if your app runs on iPad:</strong> 2064 x 2752 or 2048 x 2732 pixels (portrait), or the landscape versions 2752 x 2064 and 2732 x 2048.</li>
+<li><strong>iPhone, required:</strong> at least one set for the "iPhone with Dynamic Island" sizes, for example 1179 x 2556 or 1206 x 2622 portrait. Larger sets like 1320 x 2868 are optional.</li>
+<li>1 to 10 screenshots per size, in .png or .jpg/.jpeg, with no transparency.</li>
+</ul>
+<p>Check Apple's current <a href="https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications">screenshot specifications</a> before uploading, because sizes change with new devices.</p>
+<h2>Does my Expo app "run on iPad"?</h2>
+<p>If <code>ios.supportsTablet</code> is true in your Expo config, your app is a native iPad app and needs iPad screenshots. That's how mine ended up needing them. Either way, test it on an iPad, because reviewers often use one.</p>
+<h2>Avoiding guideline 2.3 (accurate metadata)</h2>
+<ul>
+<li>Your iPad screenshots must show the app running on iPad. A stretched iPhone screenshot isn't enough.</li>
+<li>Show real screens from the current build, not mockups of features that don't exist yet.</li>
+<li>Keep text overlays honest: no prices or claims that don't match the app.</li>
+</ul>
+<h2>Quick way to capture them</h2>
+<p>Run the app in the Xcode Simulator on an "iPad Pro 13-inch" device and press Cmd+S to save a screenshot. Check the pixel size before uploading.</p>
+<div class="cta"><strong>Shipping a subscription app with Expo, EAS or RevenueCat?</strong>
+I turned the fixes from my own 10 rejections into a pre-submit checklist plus 17 copy-paste AI prompts, so you can check everything before you submit.
+<br><a class="btn" href="https://morningreset4.gumroad.com/l/ship-your-app">Get the guide</a></div>
+</main>
+<footer>Written by Ryan, an indie iOS developer in Toronto, from his own App Review rejections. Not affiliated with Apple. Always check Apple's current <a href="https://developer.apple.com/app-store/review/guidelines/">App Review Guidelines</a>. Updated 2026-10-21.</footer>
+</body></html>
